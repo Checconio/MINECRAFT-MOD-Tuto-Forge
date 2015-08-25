@@ -1,0 +1,6 @@
+{
+    "parent": "block/fence_ne",
+    "textures": {
+        "texture": "tuto:blocks/blockModBasic"
+    }
+}
