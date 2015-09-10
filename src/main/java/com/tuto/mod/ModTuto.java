@@ -1,5 +1,6 @@
 package com.tuto.mod;
 
+import com.tuto.mod.World.WorldRegisterTuto;
 import com.tuto.mod.init.BlockMod;
 import com.tuto.mod.init.ItemMod;
 import com.tuto.mod.proxy.CommonProxy;
@@ -25,6 +26,7 @@ public class ModTuto
         ItemMod.register();
         BlockMod.init();
         BlockMod.register();
+        WorldRegisterTuto.MainRegistry();
     }
     
     @EventHandler
