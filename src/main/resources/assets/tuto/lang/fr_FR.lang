@@ -7,3 +7,6 @@ item.armorHelmetMod1.name=Helmet Mod 1
 tile.blockModBasic.name=Block Mod Basic
 tile.blockStairsModBasic.name=Block Stairs Mod Basic
 tile.blockFenceModBasic.name=Block Fence Mod Basic
+
+
+entity.Tuto.name=Mob Tuto

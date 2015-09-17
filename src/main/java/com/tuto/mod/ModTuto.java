@@ -7,6 +7,7 @@ import com.tuto.mod.proxy.CommonProxy;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -18,6 +19,9 @@ public class ModTuto
 {
      @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
      public static CommonProxy proxy;
+     
+     @Instance(Reference.MOD_ID)
+     public static ModTuto instance;
     
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
