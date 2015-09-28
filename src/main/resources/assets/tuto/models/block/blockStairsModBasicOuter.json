@@ -1,8 +1,0 @@
-{
-    "parent": "block/outer_stairs",
-    "textures": {
-        "bottom": "tuto:blocks/blockModBasic",
-        "top": "tuto:blocks/blockModBasic",
-        "side": "tuto:blocks/blockModBasic"
-    }
-}
