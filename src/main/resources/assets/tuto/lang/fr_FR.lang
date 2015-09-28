@@ -1,0 +1,13 @@
+item.itemModBasic.name=Item Mod Basic
+item.pickaxeMod.name=Pickaxe Mod
+item.swordMod.name=Sword Mod
+item.armorHelmetMod1.name=Helmet Mod 1
+
+
+tile.blockModBasic.name=Block Mod Basic
+tile.blockStairsModBasic.name=Block Stairs Mod Basic
+tile.blockFenceModBasic.name=Block Fence Mod Basic
+tile.block3d.name=Block 3D
+
+
+entity.Tuto.name=Mob Tuto
