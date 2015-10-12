@@ -2,6 +2,8 @@ item.itemModBasic.name=Item Mod Basic
 item.pickaxeMod.name=Pickaxe Mod
 item.swordMod.name=Sword Mod
 item.armorHelmetMod1.name=Helmet Mod 1
+item.multiToolTuto.name=Multi Tool Tuto
+item.foodTuto.name=Food Tuto
 
 
 tile.blockModBasic.name=Block Mod Basic
@@ -11,3 +13,6 @@ tile.block3d.name=Block 3D
 
 
 entity.Tuto.name=Mob Tuto
+
+
+itemGroup.tabTuto=Tab Tuto

@@ -12,10 +12,13 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
+import com.tuto.mod.ModTuto;
 import com.tuto.mod.Reference;
+import com.tuto.mod.Item.ItemFoodTuto;
 import com.tuto.mod.Item.ItemModArmor;
 import com.tuto.mod.Item.ItemModPickaxe;
 import com.tuto.mod.Item.ItemModSword;
+import com.tuto.mod.Item.ItemMultiTool;
 
 public class ItemMod
 {
@@ -24,7 +27,7 @@ public class ItemMod
     
     
     
-    public static Item itemModBasic, pickaxeMod, swordMod, armorHelmetMod1, armorChestplateMod1, armorLeggingsMod1, armorBootsMod1;
+    public static Item itemModBasic, pickaxeMod, swordMod, armorHelmetMod1, armorChestplateMod1, armorLeggingsMod1, armorBootsMod1, multiToolTuto, foodTuto;
     
     public static void init()
     {
@@ -35,6 +38,8 @@ public class ItemMod
         armorChestplateMod1 = new ItemModArmor(armorMod, 1).setUnlocalizedName("armorChestplateMod1");
         armorLeggingsMod1 = new ItemModArmor(armorMod, 2).setUnlocalizedName("armorLeggingsMod1");
         armorBootsMod1 = new ItemModArmor(armorMod, 3).setUnlocalizedName("armorBootsMod1");
+        multiToolTuto = new ItemMultiTool(toolMod).setUnlocalizedName("multiToolTuto").setCreativeTab(ModTuto.tabTuto);
+        foodTuto = new ItemFoodTuto(4, 0.5F, true).setUnlocalizedName("foodTuto").setCreativeTab(ModTuto.tabTuto);
     }
     
     public static void register()
@@ -47,6 +52,8 @@ public class ItemMod
         GameRegistry.registerItem(armorChestplateMod1, "armorChestplateMod1");
         GameRegistry.registerItem(armorLeggingsMod1, "armorLeggingsMod1");
         GameRegistry.registerItem(armorBootsMod1, "armorBootsMod1");
+        GameRegistry.registerItem(multiToolTuto, "multiToolTuto");
+        GameRegistry.registerItem(foodTuto, "foodTuto");
         
         /**Craft Item*/
         GameRegistry.addRecipe(new ItemStack(ItemMod.itemModBasic, 10), new Object[] {"###", "# #", "###", '#', Items.apple});
@@ -62,6 +69,8 @@ public class ItemMod
         registerRender(armorChestplateMod1);
         registerRender(armorLeggingsMod1);
         registerRender(armorBootsMod1);
+        registerRender(multiToolTuto);
+        registerRender(foodTuto);
     }
     
     public static void registerRender(Item item)

@@ -7,6 +7,7 @@ import com.tuto.mod.Models.ModelTuto;
 import com.tuto.mod.Models.ModelTutoP;
 import com.tuto.mod.Render.RenderTuto;
 import com.tuto.mod.Render.RenderTutoP;
+import com.tuto.mod.init.BiomeMod;
 import com.tuto.mod.init.BlockMod;
 import com.tuto.mod.init.ItemMod;
 
@@ -20,6 +21,7 @@ public class ClientProxy extends CommonProxy
     {
         ItemMod.registerRenders();
         BlockMod.registerRenders();
+        BiomeMod.init();
         
         //Entity Mob
         EntityHandler.RegisterMonster(EntityTuto.class, "Tuto");
