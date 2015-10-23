@@ -8,11 +8,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlocksMod extends Block
 {
-
     public BlocksMod(Material materialIn)
     {
         super(materialIn);
         this.setHarvestLevel("pickaxe", 2);
+        this.setBlockBounds(0.1F, 0.0F, 0.1F, 0.9F, 0.85F, 0.9F);
     }
     
     @SideOnly(Side.CLIENT)

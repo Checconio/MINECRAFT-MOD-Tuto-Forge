@@ -9,10 +9,12 @@ import com.tuto.mod.Render.RenderTuto;
 import com.tuto.mod.Render.RenderTutoP;
 import com.tuto.mod.init.BiomeMod;
 import com.tuto.mod.init.BlockMod;
+import com.tuto.mod.init.FuelHandlerMod;
 import com.tuto.mod.init.ItemMod;
 
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ClientProxy extends CommonProxy
 {
@@ -22,6 +24,7 @@ public class ClientProxy extends CommonProxy
         ItemMod.registerRenders();
         BlockMod.registerRenders();
         BiomeMod.init();
+        GameRegistry.registerFuelHandler(new FuelHandlerMod());
         
         //Entity Mob
         EntityHandler.RegisterMonster(EntityTuto.class, "Tuto");
