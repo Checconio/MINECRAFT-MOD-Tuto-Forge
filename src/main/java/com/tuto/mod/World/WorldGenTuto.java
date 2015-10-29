@@ -2,6 +2,7 @@ package com.tuto.mod.World;
 
 import java.util.Random;
 
+import com.tuto.mod.Structures.StructureTuto;
 import com.tuto.mod.init.BlockMod;
 
 import net.minecraft.block.Block;
@@ -9,6 +10,7 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraftforge.fml.common.IWorldGenerator;
@@ -58,7 +60,21 @@ public class WorldGenTuto implements IWorldGenerator
 
     private void GenerateOverWorld(World world, int i, int j, Random random)
     {
+        //Minerais
         addOre(BlockMod.blockModBasic, Blocks.stone, random, world, i, j, 20, 100, 4, 8, 60);
+        
+        //Structures
+        int Xpos = i + random.nextInt(16);
+        int Ypos = random.nextInt(128);
+        int Zpos = j + random.nextInt(16);
+        
+        for(int x = 0; x < 500; x++)
+        {
+            if(world.getBiomeGenForCoords(new BlockPos(Xpos, Ypos, Zpos)) == BiomeGenBase.plains)
+            {
+                new StructureTuto().genrate(world, random, new BlockPos(Xpos, Ypos, Zpos));
+            }
+        }
     }
 
     private void GenerateEnd(World world, int i, int j, Random random)

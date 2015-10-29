@@ -1,8 +1,12 @@
 package com.tuto.mod;
 
+import com.tuto.mod.Entity.EntityTuto;
+import com.tuto.mod.Entity.EntityTutoP;
+import com.tuto.mod.Handlers.EntityHandler;
 import com.tuto.mod.World.WorldRegisterTuto;
 import com.tuto.mod.init.BlockMod;
 import com.tuto.mod.init.ItemMod;
+import com.tuto.mod.init.StructureMod;
 import com.tuto.mod.proxy.CommonProxy;
 
 import net.minecraft.creativetab.CreativeTabs;
@@ -45,11 +49,15 @@ public class ModTuto
         BlockMod.init();
         BlockMod.register();
         WorldRegisterTuto.MainRegistry();
+        StructureMod.init();
     }
     
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
+        //Entity Mob
+        EntityHandler.RegisterMonster(EntityTuto.class, "Tuto");
+        EntityHandler.RegisterMonster(EntityTutoP.class, "TutoP");
         proxy.registerRenders();
     }
     

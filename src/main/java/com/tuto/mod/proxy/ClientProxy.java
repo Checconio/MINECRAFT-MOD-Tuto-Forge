@@ -26,10 +26,6 @@ public class ClientProxy extends CommonProxy
         BiomeMod.init();
         GameRegistry.registerFuelHandler(new FuelHandlerMod());
         
-        //Entity Mob
-        EntityHandler.RegisterMonster(EntityTuto.class, "Tuto");
-        EntityHandler.RegisterMonster(EntityTutoP.class, "TutoP");
-        
         //EntityRendering
         RenderingRegistry.registerEntityRenderingHandler(EntityTuto.class, new RenderTuto(Minecraft.getMinecraft().getRenderManager(), new ModelTuto(), 0.5F));
         RenderingRegistry.registerEntityRenderingHandler(EntityTutoP.class, new RenderTutoP(Minecraft.getMinecraft().getRenderManager(), new ModelTutoP(), 0.5F));

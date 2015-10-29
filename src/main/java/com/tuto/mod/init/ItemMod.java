@@ -16,6 +16,8 @@ import com.tuto.mod.ModTuto;
 import com.tuto.mod.Reference;
 import com.tuto.mod.Item.ItemFoodTuto;
 import com.tuto.mod.Item.ItemModArmor;
+import com.tuto.mod.Item.ItemModArmorBoot;
+import com.tuto.mod.Item.ItemModBasic;
 import com.tuto.mod.Item.ItemModPickaxe;
 import com.tuto.mod.Item.ItemModSword;
 import com.tuto.mod.Item.ItemMultiTool;
@@ -31,13 +33,13 @@ public class ItemMod
     
     public static void init()
     {
-        itemModBasic = new Item().setUnlocalizedName("itemModBasic").setCreativeTab(CreativeTabs.tabDecorations);
+        itemModBasic = new ItemModBasic().setUnlocalizedName("itemModBasic").setCreativeTab(CreativeTabs.tabDecorations);
         pickaxeMod = new ItemModPickaxe(toolMod).setUnlocalizedName("pickaxeMod").setCreativeTab(CreativeTabs.tabTools);
         swordMod = new ItemModSword(toolMod).setUnlocalizedName("swordMod").setCreativeTab(CreativeTabs.tabCombat);
         armorHelmetMod1 = new ItemModArmor(armorMod, 0).setUnlocalizedName("armorHelmetMod1");
         armorChestplateMod1 = new ItemModArmor(armorMod, 1).setUnlocalizedName("armorChestplateMod1");
         armorLeggingsMod1 = new ItemModArmor(armorMod, 2).setUnlocalizedName("armorLeggingsMod1");
-        armorBootsMod1 = new ItemModArmor(armorMod, 3).setUnlocalizedName("armorBootsMod1");
+        armorBootsMod1 = new ItemModArmorBoot(armorMod, 3).setUnlocalizedName("armorBootsMod1");
         multiToolTuto = new ItemMultiTool(toolMod).setUnlocalizedName("multiToolTuto").setCreativeTab(ModTuto.tabTuto);
         foodTuto = new ItemFoodTuto(4, 0.5F, true).setUnlocalizedName("foodTuto").setCreativeTab(ModTuto.tabTuto);
     }
