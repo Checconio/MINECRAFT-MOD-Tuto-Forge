@@ -6,6 +6,7 @@ import com.tuto.mod.Handlers.EntityHandler;
 import com.tuto.mod.World.WorldRegisterTuto;
 import com.tuto.mod.init.BlockMod;
 import com.tuto.mod.init.ItemMod;
+import com.tuto.mod.init.RemoveRecipe;
 import com.tuto.mod.init.StructureMod;
 import com.tuto.mod.proxy.CommonProxy;
 
@@ -50,6 +51,7 @@ public class ModTuto
         BlockMod.register();
         WorldRegisterTuto.MainRegistry();
         StructureMod.init();
+        RemoveRecipe.init();
     }
     
     @EventHandler

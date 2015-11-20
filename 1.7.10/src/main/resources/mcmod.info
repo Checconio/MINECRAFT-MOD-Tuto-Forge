@@ -1,0 +1,16 @@
+[
+{
+  "modid": "tuto",
+  "name": "Mod Tuto",
+  "description": "Decription Mod",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["checconio84"],
+  "credits": "Credit Tuto",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
