@@ -8,6 +8,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
+import net.minecraft.item.ItemSeeds;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -29,7 +30,7 @@ public class ItemMod
     
     
     
-    public static Item itemModBasic, pickaxeMod, swordMod, armorHelmetMod1, armorChestplateMod1, armorLeggingsMod1, armorBootsMod1, multiToolTuto, foodTuto;
+    public static Item itemModBasic, pickaxeMod, swordMod, armorHelmetMod1, armorChestplateMod1, armorLeggingsMod1, armorBootsMod1, multiToolTuto, foodTuto, seedTuto;
     
     public static void init()
     {
@@ -42,6 +43,7 @@ public class ItemMod
         armorBootsMod1 = new ItemModArmorBoot(armorMod, 3).setUnlocalizedName("armorBootsMod1");
         multiToolTuto = new ItemMultiTool(toolMod).setUnlocalizedName("multiToolTuto").setCreativeTab(ModTuto.tabTuto);
         foodTuto = new ItemFoodTuto(4, 0.5F, true).setUnlocalizedName("foodTuto").setCreativeTab(ModTuto.tabTuto);
+        seedTuto = new ItemSeeds(BlockMod.cultureTuto, Blocks.farmland).setUnlocalizedName("seedTuto");
     }
     
     public static void register()
@@ -56,6 +58,7 @@ public class ItemMod
         GameRegistry.registerItem(armorBootsMod1, "armorBootsMod1");
         GameRegistry.registerItem(multiToolTuto, "multiToolTuto");
         GameRegistry.registerItem(foodTuto, "foodTuto");
+        GameRegistry.registerItem(seedTuto, "seedTuto");
         
         /**Craft Item*/
         GameRegistry.addRecipe(new ItemStack(ItemMod.itemModBasic, 10), new Object[] {"###", "# #", "###", '#', Items.apple});
@@ -73,6 +76,7 @@ public class ItemMod
         registerRender(armorBootsMod1);
         registerRender(multiToolTuto);
         registerRender(foodTuto);
+        registerRender(seedTuto);
     }
     
     public static void registerRender(Item item)

@@ -2,6 +2,7 @@ package com.tuto.mod.init;
 
 import com.tuto.mod.ModTuto;
 import com.tuto.mod.Reference;
+import com.tuto.mod.Block.BlockCropsMod;
 import com.tuto.mod.Block.BlockFenceMod;
 import com.tuto.mod.Block.BlockStairsMod;
 import com.tuto.mod.Block.BlocksMod;
@@ -19,7 +20,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class BlockMod
 {
-    public static Block blockModBasic, blockStairsModBasic, blockFenceModBasic, block3d;
+    public static Block blockModBasic, blockStairsModBasic, blockFenceModBasic, block3d, cultureTuto;
     
     public static void init()
     {
@@ -31,6 +32,7 @@ public class BlockMod
         blockStairsModBasic = new BlockStairsMod(block100.getDefaultState()).setUnlocalizedName("blockStairsModBasic");
         blockFenceModBasic = new BlockFenceMod(Material.rock).setUnlocalizedName("blockFenceModBasic");
         block3d = new BlocksMod(Material.glass).setUnlocalizedName("block3d").setCreativeTab(CreativeTabs.tabBlock);
+        cultureTuto = new BlockCropsMod().setUnlocalizedName("cultureTuto");
     }
     
     public static void register()
@@ -39,6 +41,7 @@ public class BlockMod
         GameRegistry.registerBlock(blockStairsModBasic, blockStairsModBasic.getUnlocalizedName().substring(5));
         GameRegistry.registerBlock(blockFenceModBasic, blockFenceModBasic.getUnlocalizedName().substring(5));
         GameRegistry.registerBlock(block3d, block3d.getUnlocalizedName().substring(5));
+        GameRegistry.registerBlock(cultureTuto, cultureTuto.getUnlocalizedName().substring(5));
         
         /**Craft Block*/
         GameRegistry.addRecipe(new ItemStack(ItemMod.itemModBasic, 100), new Object[] {"#T#","   ", "TTT", '#', Blocks.sand, 'T', Items.apple});
@@ -51,6 +54,7 @@ public class BlockMod
         registerRender(blockStairsModBasic);
         registerRender(blockFenceModBasic);
         registerRender(block3d);
+        registerRender(cultureTuto);
     }
     
     public static void registerRender(Block block)

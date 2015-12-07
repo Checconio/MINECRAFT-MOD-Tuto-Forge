@@ -1,0 +1,6 @@
+{
+    "parent": "block/crop",
+    "textures": {
+        "crop": "tuto:blocks/cultureTest_stage_2"
+    }
+}

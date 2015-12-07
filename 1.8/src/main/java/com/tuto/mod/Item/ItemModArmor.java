@@ -22,8 +22,10 @@ public class ItemModArmor extends ItemArmor
             return Reference.MOD_ID + ":textures/models/armor/armorMod_layer_2.png";
         }
         
-        else if (stack.getItem() == ItemMod.armorHelmetMod1 || stack.getItem() == ItemMod.armorChestplateMod1 || stack.getItem() == ItemMod.armorBootsMod1);
+        else if (stack.getItem() == ItemMod.armorHelmetMod1 || stack.getItem() == ItemMod.armorChestplateMod1 || stack.getItem() == ItemMod.armorBootsMod1)
+        {
             return Reference.MOD_ID + ":textures/models/armor/armorMod_layer_1.png";
+        }
+        return null;
     }
-
 }
