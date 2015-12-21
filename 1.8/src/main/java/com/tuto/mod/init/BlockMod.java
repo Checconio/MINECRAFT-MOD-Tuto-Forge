@@ -2,7 +2,7 @@ package com.tuto.mod.init;
 
 import com.tuto.mod.ModTuto;
 import com.tuto.mod.Reference;
-import com.tuto.mod.Block.BlockCropsMod;
+import com.tuto.mod.Block.BlockCropsTuto;
 import com.tuto.mod.Block.BlockFenceMod;
 import com.tuto.mod.Block.BlockStairsMod;
 import com.tuto.mod.Block.BlocksMod;
@@ -32,7 +32,7 @@ public class BlockMod
         blockStairsModBasic = new BlockStairsMod(block100.getDefaultState()).setUnlocalizedName("blockStairsModBasic");
         blockFenceModBasic = new BlockFenceMod(Material.rock).setUnlocalizedName("blockFenceModBasic");
         block3d = new BlocksMod(Material.glass).setUnlocalizedName("block3d").setCreativeTab(CreativeTabs.tabBlock);
-        cultureTuto = new BlockCropsMod().setUnlocalizedName("cultureTuto");
+        cultureTuto = new BlockCropsTuto().setUnlocalizedName("cultureTuto");
     }
     
     public static void register()
