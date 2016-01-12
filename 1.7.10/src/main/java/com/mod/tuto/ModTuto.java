@@ -21,10 +21,10 @@ public class ModTuto
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        ItemMod.init();
-        ItemMod.register();
         BlockMod.init();
         BlockMod.register();
+        ItemMod.init();
+        ItemMod.register();
     }
     
     @EventHandler

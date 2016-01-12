@@ -14,8 +14,8 @@ import net.minecraftforge.common.util.EnumHelper;
 
 public class ItemMod
 {
-    public static ToolMaterial toolTuto = EnumHelper.addToolMaterial("toolTuto", 3, 1000, 10, 6, 30);
-    public static ArmorMaterial armorTuto = EnumHelper.addArmorMaterial("armorTuto", 40, new int[]{1, 4, 3, 2}, 50);
+    public static ToolMaterial toolTuto = EnumHelper.addToolMaterial("toolTuto", 3, 1000, 10, 100, 30);
+    public static ArmorMaterial armorTuto = EnumHelper.addArmorMaterial("armorTuto", 40, new int[]{8, 8, 8, 8}, 50);
     
     public static Item item_test, item_sword, item_pickaxe, casqueArmor, plastronArmor, pantalonArmor, bootArmor;
     
