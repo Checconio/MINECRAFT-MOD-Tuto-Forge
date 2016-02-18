@@ -19,7 +19,7 @@ public class BlockMod
     
     public static void init()
     {
-        block_test = new BlockBasic(Material.rock).setBlockName("block_test").setCreativeTab(CreativeTabs.tabBlock).setBlockTextureName(Reference.MOD_ID + ":block_test");
+        block_test = new BlockBasic(Material.rock, 2).setBlockName("block_test").setCreativeTab(CreativeTabs.tabBlock).setBlockTextureName(Reference.MOD_ID + ":block_test");
         block_stairs = new BlockStairsMod(BlockMod.block_test, 0).setBlockName("block_stairs").setCreativeTab(CreativeTabs.tabBlock).setLightLevel(1.0F);
         block_fence = new BlockFenceMod(Reference.MOD_ID + ":block_test", Material.rock).setBlockName("block_fence").setLightLevel(1.0F);
     }

@@ -3,6 +3,7 @@ package com.mod.tuto;
 import com.mod.tuto.init.BlockMod;
 import com.mod.tuto.init.ItemMod;
 import com.mod.tuto.proxy.CommonProxy;
+import com.mod.tuto.world.WorldRegister;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -25,6 +26,7 @@ public class ModTuto
         BlockMod.register();
         ItemMod.init();
         ItemMod.register();
+        WorldRegister.mainRegsitry();
     }
     
     @EventHandler
