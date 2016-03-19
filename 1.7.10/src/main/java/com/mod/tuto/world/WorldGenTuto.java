@@ -47,7 +47,7 @@ public class WorldGenTuto implements IWorldGenerator
 
     private void GenerateNether(World world, int i, int j, Random random)
     {
-        addOre(BlockMod.block_test, Blocks.netherrack, random, world, i, j, 20, 150, 5, 10, 500);
+        addOre(BlockMod.block_test, Blocks.netherrack, random, world, i, j, 20, 250, 5, 10, 5000);
     }
 
     private void GenerateOverWorld(World world, int i, int j, Random random)

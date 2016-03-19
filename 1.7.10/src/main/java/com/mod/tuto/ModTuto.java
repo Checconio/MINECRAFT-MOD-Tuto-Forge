@@ -1,12 +1,14 @@
 package com.mod.tuto;
 
 import com.mod.tuto.init.BlockMod;
+import com.mod.tuto.init.EntityMod;
 import com.mod.tuto.init.ItemMod;
 import com.mod.tuto.proxy.CommonProxy;
 import com.mod.tuto.world.WorldRegister;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
@@ -16,6 +18,9 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 public class ModTuto
 {
+    @Instance(Reference.MOD_ID)
+    public static ModTuto instance;
+    
     @SidedProxy(clientSide = Reference.CLIENT_PROXY, serverSide = Reference.SERVER_PROXY)
     public static CommonProxy proxy;
     
@@ -33,6 +38,7 @@ public class ModTuto
     public void init(FMLInitializationEvent event)
     {
         proxy.registerRenders();
+        EntityMod.init();
     }
     
     @EventHandler

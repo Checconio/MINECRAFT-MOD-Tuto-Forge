@@ -10,8 +10,8 @@ public class WorldRegister
         registerWorldGen(new WorldGenTuto(), 0);
     }
     
-    public static void registerWorldGen(IWorldGenerator iGenerator, int probability)
+    public static void registerWorldGen(IWorldGenerator iGenerator, int modGenerationWeight)
     {
-        GameRegistry.registerWorldGenerator(iGenerator, probability);
+        GameRegistry.registerWorldGenerator(iGenerator, modGenerationWeight);
     }
 }
