@@ -38,7 +38,7 @@ public class WorldGenTuto implements IWorldGenerator
         {
             int chunkSize = 16;
             int Xpos = posX + random.nextInt(chunkSize);
-            int Ypos = minY + random.nextInt(maxY - minY);
+            int Ypos = minY + random.nextInt(maxY - minY) + minY;
             int Zpos = posZ + random.nextInt(chunkSize);
             
             new WorldGenMinable(block, maxV).generate(world, random, Xpos, Ypos, Zpos);
