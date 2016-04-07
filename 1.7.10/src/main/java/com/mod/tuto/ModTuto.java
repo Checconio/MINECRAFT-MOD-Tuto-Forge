@@ -13,6 +13,10 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
 
@@ -23,6 +27,15 @@ public class ModTuto
     
     @SidedProxy(clientSide = Reference.CLIENT_PROXY, serverSide = Reference.SERVER_PROXY)
     public static CommonProxy proxy;
+    
+    public static CreativeTabs tabTuto = new CreativeTabs("tabTuto")
+    {
+        @SideOnly(Side.CLIENT)
+        public Item getTabIconItem()
+        {
+            return Item.getItemFromBlock(BlockMod.block_test);
+        }
+    };
     
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)

@@ -1,5 +1,6 @@
 package com.mod.tuto.init;
 
+import com.mod.tuto.ModTuto;
 import com.mod.tuto.Reference;
 import com.mod.tuto.blocks.BlockBasic;
 import com.mod.tuto.blocks.BlockFenceMod;
@@ -21,10 +22,10 @@ public class BlockMod
     
     public static void init()
     {
-        block_test = new BlockBasic(Material.rock, 2).setBlockName("block_test").setCreativeTab(CreativeTabs.tabBlock).setBlockTextureName(Reference.MOD_ID + ":block_test");
+        block_test = new BlockBasic(Material.rock, 2).setBlockName("block_test").setCreativeTab(ModTuto.tabTuto).setBlockTextureName(Reference.MOD_ID + ":block_test");
         block_stairs = new BlockStairsMod(BlockMod.block_test, 0).setBlockName("block_stairs").setCreativeTab(CreativeTabs.tabBlock).setLightLevel(1.0F);
         block_fence = new BlockFenceMod(Reference.MOD_ID + ":block_test", Material.rock).setBlockName("block_fence").setLightLevel(1.0F);
-        blockIsbrh = new BlockIsbrhMod(Material.rock).setBlockName("blockIsbrh").setBlockTextureName("glowstone");
+        blockIsbrh = new BlockIsbrhMod(Material.rock).setBlockName("blockIsbrh").setBlockTextureName("glowstone").setCreativeTab(ModTuto.tabTuto);
         blockTesr = new BlockTesr(Material.rock).setCreativeTab(CreativeTabs.tabBlock).setBlockName("blockTesr").setBlockTextureName("glowstone");
     }
     

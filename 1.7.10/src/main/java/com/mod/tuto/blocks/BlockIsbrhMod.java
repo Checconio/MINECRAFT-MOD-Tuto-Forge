@@ -23,6 +23,12 @@ public class BlockIsbrhMod extends Block
         super(p_i45394_1_);
     }
     
+    @SideOnly(Side.CLIENT)
+    public float getAmbientOcclusionLightValue()
+    {
+        return 1.0F;
+    }
+    
     public boolean renderAsNormalBlock()
     {
         return false;
