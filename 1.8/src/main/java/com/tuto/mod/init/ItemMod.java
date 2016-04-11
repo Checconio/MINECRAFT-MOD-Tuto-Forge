@@ -43,7 +43,7 @@ public class ItemMod
         armorBootsMod1 = new ItemModArmorBoot(armorMod, 3).setUnlocalizedName("armorBootsMod1");
         multiToolTuto = new ItemMultiTool(toolMod).setUnlocalizedName("multiToolTuto").setCreativeTab(ModTuto.tabTuto);
         foodTuto = new ItemFoodTuto(4, 0.5F, true).setUnlocalizedName("foodTuto").setCreativeTab(ModTuto.tabTuto);
-        seedTuto = new ItemSeeds(BlockMod.cultureTuto, Blocks.farmland).setUnlocalizedName("seedTuto");
+        seedTuto = new ItemSeeds(BlockMod.cultureTuto, Blocks.stone).setUnlocalizedName("seedTuto");
     }
     
     public static void register()

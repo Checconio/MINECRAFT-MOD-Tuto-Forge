@@ -1,22 +1,24 @@
 package com.tuto.mod.init;
 
 import java.util.List;
+import java.util.Map;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
+import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.item.crafting.IRecipe;
 
 public class RemoveRecipe
 {
     public static void init()
     {
-        removeRecipe(new ItemStack(Items.bed));
-        removeRecipe(new ItemStack(Blocks.diamond_block));
+        removeCraft(new ItemStack(Items.bed));
+        removeCraft(new ItemStack(Blocks.diamond_block));
     }
     
-    public static void removeRecipe(ItemStack stack)
+    public static void removeCraft(ItemStack stack)
     {
         List<IRecipe> recipeList = CraftingManager.getInstance().getRecipeList();
         for(int i = 0; i < recipeList.size(); i++)

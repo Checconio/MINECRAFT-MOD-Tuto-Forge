@@ -5,6 +5,7 @@ item.casqueArmor.name=Casque Armor
 item.plastronArmor.name=Plastron Armor
 item.pantalonArmor.name=Pantalon Armor
 item.bootArmor.name=Boot Armor
+item.multiToolMod.name=Multi Tool
 
 tile.block_test.name=Test Block
 tile.block_stairs.name=Block Stairs

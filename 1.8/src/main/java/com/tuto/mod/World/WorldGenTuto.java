@@ -43,7 +43,7 @@ public class WorldGenTuto implements IWorldGenerator
         {
             int defaultChunkSize = 16;
             int Xpos = posX + random.nextInt(defaultChunkSize);
-            int Ypos = minY + random.nextInt(maxY - minY) + minY;
+            int Ypos = minY + random.nextInt(maxY - minY);
             int Zpos = posZ + random.nextInt(defaultChunkSize);
             
             IBlockState state = block.getDefaultState();
