@@ -2,11 +2,13 @@ package com.tuto.mod.World;
 
 import java.util.Random;
 
+import com.google.common.base.Predicate;
 import com.tuto.mod.Structures.StructureTuto;
 import com.tuto.mod.init.BlockMod;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.block.state.pattern.BlockHelper;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
@@ -49,7 +51,7 @@ public class WorldGenTuto implements IWorldGenerator
             IBlockState state = block.getDefaultState();
             BlockPos blockPos = new BlockPos(Xpos, Ypos, Zpos);
             
-            new WorldGenMinable(state, maxV).generate(world, random, blockPos);
+            new WorldGenMinable(state, maxV, BlockHelper.forBlock(blockSpawn)).generate(world, random, blockPos);
         }
     }
 
@@ -61,7 +63,7 @@ public class WorldGenTuto implements IWorldGenerator
     private void GenerateOverWorld(World world, int i, int j, Random random)
     {
         //Minerais
-        addOre(BlockMod.blockModBasic, Blocks.stone, random, world, i, j, 20, 100, 4, 8, 60);
+        addOre(BlockMod.blockModBasic, Blocks.grass, random, world, i, j, 20, 100, 4, 8, 60);
         
         //Structures
         int Xpos = i + random.nextInt(16);
