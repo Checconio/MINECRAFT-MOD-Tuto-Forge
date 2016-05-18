@@ -22,6 +22,7 @@ import com.tuto.mod.Item.ItemModBasic;
 import com.tuto.mod.Item.ItemModPickaxe;
 import com.tuto.mod.Item.ItemModSword;
 import com.tuto.mod.Item.ItemMultiTool;
+import com.tuto.mod.Item.ItemTimer;
 
 public class ItemMod
 {
@@ -30,7 +31,7 @@ public class ItemMod
     
     
     
-    public static Item itemModBasic, pickaxeMod, swordMod, armorHelmetMod1, armorChestplateMod1, armorLeggingsMod1, armorBootsMod1, multiToolTuto, foodTuto, seedTuto;
+    public static Item itemModBasic, pickaxeMod, swordMod, armorHelmetMod1, armorChestplateMod1, armorLeggingsMod1, armorBootsMod1, multiToolTuto, foodTuto, seedTuto, itemTimer;
     
     public static void init()
     {
@@ -44,6 +45,7 @@ public class ItemMod
         multiToolTuto = new ItemMultiTool(toolMod).setUnlocalizedName("multiToolTuto").setCreativeTab(ModTuto.tabTuto);
         foodTuto = new ItemFoodTuto(4, 0.5F, true).setUnlocalizedName("foodTuto").setCreativeTab(ModTuto.tabTuto);
         seedTuto = new ItemSeeds(BlockMod.cultureTuto, Blocks.stone).setUnlocalizedName("seedTuto");
+        itemTimer = new ItemTimer().setUnlocalizedName("itemTimer").setCreativeTab(ModTuto.tabTuto);
     }
     
     public static void register()
@@ -59,6 +61,7 @@ public class ItemMod
         GameRegistry.registerItem(multiToolTuto, "multiToolTuto");
         GameRegistry.registerItem(foodTuto, "foodTuto");
         GameRegistry.registerItem(seedTuto, "seedTuto");
+        GameRegistry.registerItem(itemTimer, "itemTimer");
         
         /**Craft Item*/
         GameRegistry.addRecipe(new ItemStack(ItemMod.itemModBasic, 10), new Object[] {"###", "# #", "###", '#', Items.apple});
@@ -77,6 +80,7 @@ public class ItemMod
         registerRender(multiToolTuto);
         registerRender(foodTuto);
         registerRender(seedTuto);
+        registerRender(itemTimer);
     }
     
     public static void registerRender(Item item)
