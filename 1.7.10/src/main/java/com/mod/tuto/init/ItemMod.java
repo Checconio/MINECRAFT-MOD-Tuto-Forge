@@ -2,6 +2,7 @@ package com.mod.tuto.init;
 
 import com.mod.tuto.Reference;
 import com.mod.tuto.items.ItemArmorTuto;
+import com.mod.tuto.items.ItemFoodMod;
 import com.mod.tuto.items.ItemMultiToolMod;
 import com.mod.tuto.items.ItemPickaxeTuto;
 import com.mod.tuto.items.ItemSwordTuto;
@@ -18,7 +19,7 @@ public class ItemMod
     public static ToolMaterial toolTuto = EnumHelper.addToolMaterial("toolTuto", 3, 1000, 10, 100, 30);
     public static ArmorMaterial armorTuto = EnumHelper.addArmorMaterial("armorTuto", 40, new int[]{8, 8, 8, 8}, 50);
     
-    public static Item item_test, item_sword, item_pickaxe, casqueArmor, plastronArmor, pantalonArmor, bootArmor, multiToolMod;
+    public static Item item_test, item_sword, item_pickaxe, casqueArmor, plastronArmor, pantalonArmor, bootArmor, multiToolMod, itemFoodTuto;
     
     public static void init()
     {
@@ -30,6 +31,7 @@ public class ItemMod
         pantalonArmor = new ItemArmorTuto(armorTuto, 2).setCreativeTab(CreativeTabs.tabCombat).setTextureName(Reference.MOD_ID + ":pantalonArmor").setUnlocalizedName("pantalonArmor");
         bootArmor = new ItemArmorTuto(armorTuto, 3).setCreativeTab(CreativeTabs.tabCombat).setTextureName(Reference.MOD_ID + ":bootArmor").setUnlocalizedName("bootArmor");
         multiToolMod = new ItemMultiToolMod(toolTuto).setCreativeTab(CreativeTabs.tabTools).setTextureName(Reference.MOD_ID + ":item_test").setUnlocalizedName("multiToolMod");
+        itemFoodTuto = new ItemFoodMod(3, 0.0F, false).setAlwaysEdible().setCreativeTab(CreativeTabs.tabFood).setTextureName(Reference.MOD_ID + ":itemFoodTuto").setUnlocalizedName("itemFoodTuto");
         
     }
     
@@ -43,5 +45,6 @@ public class ItemMod
         GameRegistry.registerItem(pantalonArmor, "pantalonArmor");
         GameRegistry.registerItem(bootArmor, "bootArmor");
         GameRegistry.registerItem(multiToolMod, "multiToolMod");
+        GameRegistry.registerItem(itemFoodTuto, "itemFoodTuto");
     }
 }

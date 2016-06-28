@@ -1,5 +1,6 @@
 package com.mod.tuto;
 
+import com.mod.tuto.init.BiomesMod;
 import com.mod.tuto.init.BlockMod;
 import com.mod.tuto.init.EntityMod;
 import com.mod.tuto.init.ItemMod;
@@ -45,6 +46,7 @@ public class ModTuto
         ItemMod.init();
         ItemMod.register();
         WorldRegister.mainRegsitry();
+        BiomesMod.init();
     }
     
     @EventHandler
