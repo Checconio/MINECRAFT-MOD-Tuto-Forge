@@ -1,0 +1,16 @@
+[
+{
+  "modid": "tuto",
+  "name": "Mod Tuto",
+  "description": "description",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["checconio84"],
+  "credits": "The Forge and FML guys, for making this example",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
