@@ -3,6 +3,7 @@ package com.mod.tuto;
 import com.mod.tuto.init.BiomesMod;
 import com.mod.tuto.init.BlockMod;
 import com.mod.tuto.init.EntityMod;
+import com.mod.tuto.init.FuelHndlerMod;
 import com.mod.tuto.init.ItemMod;
 import com.mod.tuto.proxy.CommonProxy;
 import com.mod.tuto.world.WorldRegister;
@@ -14,6 +15,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.creativetab.CreativeTabs;
@@ -54,6 +56,7 @@ public class ModTuto
     {
         proxy.registerRenders();
         EntityMod.init();
+        GameRegistry.registerFuelHandler(new FuelHndlerMod());
     }
     
     @EventHandler
