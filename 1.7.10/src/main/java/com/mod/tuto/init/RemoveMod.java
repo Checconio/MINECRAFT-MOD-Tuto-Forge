@@ -20,7 +20,7 @@ public class RemoveMod
         for(int i = 0; i < recipeList.size(); i++)
         {
             ItemStack out = recipeList.get(i).getRecipeOutput();
-            if(out != null && stack.getItem() == out.getItem() && stack.getItemDamage() == stack.getItemDamage())
+            if(out != null && stack.getItem() == out.getItem() && stack.getItemDamage() == out.getItemDamage())
             {
                 recipeList.remove(i);
             }
