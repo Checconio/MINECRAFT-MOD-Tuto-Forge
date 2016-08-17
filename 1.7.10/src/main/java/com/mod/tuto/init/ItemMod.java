@@ -6,6 +6,7 @@ import com.mod.tuto.items.ItemFoodMod;
 import com.mod.tuto.items.ItemMultiToolMod;
 import com.mod.tuto.items.ItemPickaxeTuto;
 import com.mod.tuto.items.ItemSwordTuto;
+import com.mod.tuto.tems.ItemMods;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.creativetab.CreativeTabs;
@@ -23,7 +24,7 @@ public class ItemMod
     
     public static void init()
     {
-        item_test = new Item().setUnlocalizedName("item_test").setCreativeTab(CreativeTabs.tabDecorations).setTextureName(Reference.MOD_ID + ":item_test");
+        item_test = new ItemMods().setUnlocalizedName("item_test").setCreativeTab(CreativeTabs.tabDecorations).setTextureName(Reference.MOD_ID + ":item_test");
         item_sword = new ItemSwordTuto(ItemMod.toolTuto).setCreativeTab(CreativeTabs.tabTools).setTextureName(Reference.MOD_ID + ":item_sword").setUnlocalizedName("item_sword");
         item_pickaxe = new ItemPickaxeTuto(ItemMod.toolTuto).setCreativeTab(CreativeTabs.tabTools).setTextureName(Reference.MOD_ID + ":item_pickaxe").setUnlocalizedName("item_pickaxe");
         casqueArmor = new ItemArmorTuto(armorTuto, 0).setCreativeTab(CreativeTabs.tabCombat).setTextureName(Reference.MOD_ID + ":casqueArmor").setUnlocalizedName("casqueArmor");

@@ -1,5 +1,8 @@
 package com.tuto.mod;
 
+import com.tuto.mod.init.BlocksMod;
+import com.tuto.mod.init.CraftsMod;
+import com.tuto.mod.init.ItemsMod;
 import com.tuto.mod.proxy.CommonProxy;
 
 import net.minecraftforge.fml.common.Mod;
@@ -19,7 +22,11 @@ public class ModTuto
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        
+        BlocksMod.init();
+        BlocksMod.register();
+        ItemsMod.init();
+        ItemsMod.register();
+        CraftsMod.init();
     }
     
     @EventHandler

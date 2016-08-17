@@ -10,6 +10,7 @@ public class BlockBasic extends Block
     {
         super(p_i45394_1_);
         this.setHarvestLevel("pickaxe", level);
+        this.setBlockBounds(0.0F, 0.0F, 0.0F, 0.8F, 0.5F, 1.0F);
     }
     
     public boolean isOpaqueCube()

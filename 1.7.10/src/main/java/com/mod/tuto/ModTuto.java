@@ -5,6 +5,7 @@ import com.mod.tuto.init.BlockMod;
 import com.mod.tuto.init.EntityMod;
 import com.mod.tuto.init.FuelHndlerMod;
 import com.mod.tuto.init.ItemMod;
+import com.mod.tuto.init.RemoveMod;
 import com.mod.tuto.proxy.CommonProxy;
 import com.mod.tuto.world.WorldRegister;
 
@@ -47,6 +48,7 @@ public class ModTuto
         BlockMod.register();
         ItemMod.init();
         ItemMod.register();
+        RemoveMod.init();
         WorldRegister.mainRegsitry();
         BiomesMod.init();
     }
