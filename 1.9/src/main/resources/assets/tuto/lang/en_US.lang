@@ -1,5 +1,9 @@
 item.itemTest.name=Item Test
 item.pickaxeTuto.name=Pickaxe Tuto
 item.swordTuto.name=Sword Tuto
+item.helmetTuto.name=Helmet Tuto
+item.chestplateTuto.name=Chestplate Tuto
+item.leggingsTuto.name=Leggings Tuto
+item.bootsTuto.name=Boots Tuto
 
 tile.blockTest.name=Block Test
