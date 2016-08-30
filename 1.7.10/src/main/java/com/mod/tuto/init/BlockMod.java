@@ -3,6 +3,7 @@ package com.mod.tuto.init;
 import com.mod.tuto.ModTuto;
 import com.mod.tuto.Reference;
 import com.mod.tuto.blocks.BlockBasic;
+import com.mod.tuto.blocks.BlockCropsMod;
 import com.mod.tuto.blocks.BlockFenceMod;
 import com.mod.tuto.blocks.BlockIsbrhMod;
 import com.mod.tuto.blocks.BlockStairsMod;
@@ -18,7 +19,7 @@ import net.minecraft.item.ItemStack;
 
 public class BlockMod
 {
-    public static Block block_test, block_stairs, block_fence, blockIsbrh, blockTesr;
+    public static Block block_test, block_stairs, block_fence, blockIsbrh, blockTesr, cultureTest;
     
     public static void init()
     {
@@ -27,6 +28,7 @@ public class BlockMod
         block_fence = new BlockFenceMod(Reference.MOD_ID + ":block_test", Material.rock).setBlockName("block_fence").setLightLevel(1.0F);
         blockIsbrh = new BlockIsbrhMod(Material.rock).setBlockName("blockIsbrh").setBlockTextureName("glowstone").setCreativeTab(ModTuto.tabTuto);
         blockTesr = new BlockTesr(Material.rock).setCreativeTab(CreativeTabs.tabBlock).setBlockName("blockTesr").setBlockTextureName("glowstone");
+        cultureTest = new BlockCropsMod().setBlockName("cultureTest").setBlockTextureName(Reference.MOD_ID + ":cultureTest");
     }
     
     public static void register()
@@ -36,6 +38,7 @@ public class BlockMod
         GameRegistry.registerBlock(block_fence, block_fence.getUnlocalizedName().substring(5));
         GameRegistry.registerBlock(blockIsbrh, blockIsbrh.getUnlocalizedName().substring(5));
         GameRegistry.registerBlock(blockTesr, blockTesr.getUnlocalizedName().substring(5));
+        GameRegistry.registerBlock(cultureTest, cultureTest.getUnlocalizedName().substring(5));
         
         
         GameRegistry.addRecipe(new ItemStack(BlockMod.block_test, 5), new Object[]{"###", "#F#", '#', Items.apple, 'F', Items.diamond});
