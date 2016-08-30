@@ -3,6 +3,7 @@ package com.mod.tuto;
 import com.mod.tuto.init.BiomesMod;
 import com.mod.tuto.init.BlockMod;
 import com.mod.tuto.init.EntityMod;
+import com.mod.tuto.init.EventsMod;
 import com.mod.tuto.init.FuelHndlerMod;
 import com.mod.tuto.init.ItemMod;
 import com.mod.tuto.init.RemoveMod;
@@ -51,6 +52,7 @@ public class ModTuto
         RemoveMod.init();
         WorldRegister.mainRegsitry();
         BiomesMod.init();
+        EventsMod.init();
     }
     
     @EventHandler
