@@ -4,6 +4,7 @@ import com.tuto.mod.ModTuto;
 import com.tuto.mod.Reference;
 import com.tuto.mod.Block.BlockCropsTuto;
 import com.tuto.mod.Block.BlockFenceMod;
+import com.tuto.mod.Block.BlockMulti;
 import com.tuto.mod.Block.BlockStairsMod;
 import com.tuto.mod.Block.BlocksMod;
 
@@ -20,7 +21,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class BlockMod
 {
-    public static Block blockModBasic, blockStairsModBasic, blockFenceModBasic, block3d, cultureTuto;
+    public static Block blockModBasic, blockStairsModBasic, blockFenceModBasic, block3d, cultureTuto, blockMulti1, blockMulti2, blockMulti3;
     
     public static void init()
     {
@@ -29,10 +30,13 @@ public class BlockMod
         
         /**Block*/
         blockModBasic = new BlocksMod(Material.rock).setUnlocalizedName("blockModBasic").setCreativeTab(ModTuto.tabTuto);
-        blockStairsModBasic = new BlockStairsMod(block100.getDefaultState()).setUnlocalizedName("blockStairsModBasic");
+        blockStairsModBasic = new BlockStairsMod(Blocks.obsidian.getDefaultState()).setUnlocalizedName("blockStairsModBasic").setResistance(1.0F);
         blockFenceModBasic = new BlockFenceMod(Material.rock).setUnlocalizedName("blockFenceModBasic");
         block3d = new BlocksMod(Material.glass).setUnlocalizedName("block3d").setCreativeTab(CreativeTabs.tabBlock);
         cultureTuto = new BlockCropsTuto().setUnlocalizedName("cultureTuto");
+        blockMulti1 = new BlockMulti().setUnlocalizedName("blockMulti1").setCreativeTab(CreativeTabs.tabBlock);
+        blockMulti2 = new BlockMulti().setUnlocalizedName("blockMulti2");
+        blockMulti3 = new BlockMulti().setUnlocalizedName("blockMulti3");
     }
     
     public static void register()
@@ -42,6 +46,9 @@ public class BlockMod
         GameRegistry.registerBlock(blockFenceModBasic, blockFenceModBasic.getUnlocalizedName().substring(5));
         GameRegistry.registerBlock(block3d, block3d.getUnlocalizedName().substring(5));
         GameRegistry.registerBlock(cultureTuto, cultureTuto.getUnlocalizedName().substring(5));
+        GameRegistry.registerBlock(blockMulti1, blockMulti1.getUnlocalizedName().substring(5));
+        GameRegistry.registerBlock(blockMulti2, blockMulti2.getUnlocalizedName().substring(5));
+        GameRegistry.registerBlock(blockMulti3, blockMulti3.getUnlocalizedName().substring(5));
         
         /**Craft Block*/
         GameRegistry.addRecipe(new ItemStack(ItemMod.itemModBasic, 100), new Object[] {"#T#","   ", "TTT", '#', Blocks.sand, 'T', Items.apple});
@@ -55,6 +62,9 @@ public class BlockMod
         registerRender(blockFenceModBasic);
         registerRender(block3d);
         registerRender(cultureTuto);
+        registerRender(blockMulti1);
+        registerRender(blockMulti2);
+        registerRender(blockMulti3);
     }
     
     public static void registerRender(Block block)

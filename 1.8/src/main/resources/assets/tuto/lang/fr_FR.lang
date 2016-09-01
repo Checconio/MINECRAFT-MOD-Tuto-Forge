@@ -11,6 +11,7 @@ tile.blockModBasic.name=Block Mod Basic
 tile.blockStairsModBasic.name=Block Stairs Mod Basic
 tile.blockFenceModBasic.name=Block Fence Mod Basic
 tile.block3d.name=Block 3D
+tile.blockMulti1.name=Block Multi
 
 
 entity.Tuto.name=Mob Tuto
